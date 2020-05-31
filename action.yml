@@ -1,0 +1,9 @@
+name: "arch make"
+description: "Exectues make on arch (to build packages for example)"
+branding:
+  icon: package
+  color: purple
+runs:
+  using: Docker
+  image: Dockerfile
+
