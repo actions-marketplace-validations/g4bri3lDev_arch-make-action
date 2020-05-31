@@ -1,6 +1,6 @@
 FROM archlinux/base:latest
 
-RUN pacman -Syu --needed --noconfirm binutils fakeroot sudo make git
+RUN pacman -Syu --needed --noconfirm binutils fakeroot sudo make git go
 
 RUN useradd build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
