@@ -7,12 +7,7 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 USER build
 RUN  curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
-RUN cd /home/build
-RUN git clone https://aur.archlinux.org/yay.git
-RUN cd yay
-RUN echo -e "y\ny" | makepkg -si
-RUN cd ..
-RUN rm -rf yay
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
