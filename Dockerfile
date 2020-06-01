@@ -1,6 +1,6 @@
 FROM archlinux/base:latest
 
-RUN pacman -Syu --needed --noconfirm base-devel gcc binutils fakeroot sudo make git go tree fftw gtk3 libmtp initltool
+RUN pacman -Syu --needed --noconfirm base-devel gcc binutils fakeroot sudo make git go tree fftw gtk3 libmtp intltool
 
 RUN useradd build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
