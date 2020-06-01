@@ -5,7 +5,7 @@ sudo chown -R build /github/workspace /github/home
 fi
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+echo -e "y\ny" | makepkg -si
 cd ..
 rm -rf yay
 
