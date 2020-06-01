@@ -7,6 +7,7 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 USER build
 RUN  curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
+RUN git clone https://aur.archlinux.org/yay.git
 RUN cd yay
 RUN echo -e "y\ny" | makepkg -si
 RUN cd ..
