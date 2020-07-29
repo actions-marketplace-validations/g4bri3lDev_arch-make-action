@@ -1,6 +1,6 @@
 FROM archlinux/base:latest
 
-RUN pacman -Syu --needed --noconfirm base-devel gcc binutils fakeroot sudo make git go tree fftw gtk3 libmtp intltool ppp fuse nss libnma xl2tpd libnm openssl libsecret python python-setuptools libxml2 libzip gcc8 gnuplot imagemagick
+RUN pacman -Syu --needed --noconfirm base-devel gcc binutils fakeroot sudo make git go tree fftw gtk3 libmtp intltool ppp fuse2 nss libnma xl2tpd libnm openssl libsecret python python-setuptools libxml2 libzip gcc8 gnuplot imagemagick gcc-libs
  
 RUN useradd -m build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
