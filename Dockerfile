@@ -6,7 +6,7 @@ RUN useradd -m build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 USER build
-RUN  curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
+#RUN  curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
 
 COPY entrypoint.sh /entrypoint.sh
 
